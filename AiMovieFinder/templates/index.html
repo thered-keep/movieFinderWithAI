@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Lato:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="my-box">
+        <h1>{{ title }}</h1>
+        <form method="post" action="/search">
+            <input type="radio" id="search_type" name="search_type" value="title" checked>
+            <br >
+            <input class= "box1" type="text" name="search_query" placeholder="Enter title here">
+            <br>
+            <input class="btn" type="submit" value="Search">
+        </form>
+
+        <!-- Display search results -->
+        <div class="box2">
+        <ul id="myUL">
+            {% for item in search_result %}
+             <li class="lis">
+                 <a href="#" onclick="getOverview('{{ item }}')">{{ item }}</a>
+             </li>
+            {%endfor%}
+        </ul>
+        </div>
+    </div>
+    <div id="overviewContainer"></div>
+      <script src="../static/showMovies.js"></script>
+</body>
+</html>
+
