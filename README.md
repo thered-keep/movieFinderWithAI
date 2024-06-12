@@ -20,16 +20,17 @@ The Movie Finder App helps you discover the 10 most similar movies based on the 
 - **Method**: GET
 - **Parameters**: 
   - `title` (str) - Title of the movie
--**returns**: overivew of the movie in json
+- **returns**: overivew of the movie in json
+
 ### `/`
 - **Method**: GET
--**returns**: the html template of the main page
+- **returns**: the html template of the main page
 
 ### `/search`
 - **Method**: POST
 - **Parameters**:
   - `search_query` (str) - The movie title to search for
--**returns**: the rendered html template with the found movies list
+- **returns**: the rendered html template with the found movies list
 
 ## Installation Guide
 
