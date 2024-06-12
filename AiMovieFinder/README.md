@@ -2,9 +2,6 @@
 # Movie Finder App
 
 The Movie Finder App helps you discover the 10 most similar movies based on the title of a movie you provide. It leverages TensorFlow's Universal Sentence Encoder to transform movie titles into numerical vectors and uses K-Nearest Neighbors (KNN) to find the nearest movies.
-![Find your movies](AiMovieFinder/static/demo)
-
-
 ## Features
 
 - **Movie Search**: Find the top 10 movies similar to the movie title you enter.
